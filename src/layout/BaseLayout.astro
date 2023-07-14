@@ -1,6 +1,7 @@
 ---
 import MainHead from "../components/astro/MainHead.astro";
 import { MainProps } from "../core/type";
+import "../styles/main.css";
 
 interface Props extends MainProps {}
 
@@ -8,14 +9,13 @@ const { title, description, includeFontAwesome, includeGsap } = Astro.props;
 ---
 
 <html lang="en">
-  <head>
-    <MainHead
-      title={title}
-      description={description}
-      includeFontAwesome={includeFontAwesome}
-      includeGsap={includeGsap}
-    />
-  </head>
+  <MainHead
+    title={title}
+    description={description}
+    includeFontAwesome={includeFontAwesome}
+    includeGsap={includeGsap}
+  />
+
   <body>
     <div
       class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-16 pt-20 text-center lg:pt-32"

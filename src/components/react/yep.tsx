@@ -1,7 +1,7 @@
 const Yep = () => {
   return (
     <a
-      className="group inline-flex ring-1 items-center justify-center rounded-full py-2 px-4 text-sm focus:outline-none ring-slate-200 text-slate-700 hover:text-slate-900 hover:ring-slate-300 active:bg-slate-100 active:text-slate-600 focus-visible:outline-blue-600 focus-visible:ring-slate-300"
+      className="group inline-flex ring-1 items-center justify-center rounded-full py-2 px-4 text-sm focus:outline-none ring-slate-200 text-slate-700 hover:text-slate-900 hover:ring-slate-300 active:bg-slate-100 bg-primary active:text-slate-600 focus-visible:outline-blue-600 focus-visible:ring-slate-300"
       href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
     >
       <svg

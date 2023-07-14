@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind colors;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Noto Serif";
+    font-display: block;
+    src: url("/fonts/NotoSerif.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: "Noto Serif - bold";
+    font-display: block;
+    src: url("/fonts/NotoSerif-Bold.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: "Noto Serif - semibold";
+    font-display: block;
+    src: url("/fonts/NotoSerif-Bold.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: "Noto Serif - thin";
+    font-display: block;
+    src: url("/fonts/NotoSerif-Thin.woff2") format("woff2");
+  }
+}
+
+* {
+  font-family: "Noto Serif", serif;
+}
