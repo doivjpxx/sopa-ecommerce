@@ -1,3 +1,144 @@
-<div class="p-32 bg-black text-white absolute bottom-0 w-full">
-  Footer work!
+---
+const products = [
+  {
+    label: "Model 000",
+    url: "#",
+  },
+  {
+    label: "Model 001",
+    url: "#",
+  },
+  {
+    label: "Laces",
+    url: "#",
+  },
+  {
+    label: "Masks",
+    url: "#",
+  },
+  {
+    label: "No-show Socks",
+    url: "#",
+  },
+  {
+    label: "Crew Socks",
+    url: "#",
+  },
+  {
+    label: "Gift Cards",
+    url: "#",
+  },
+];
+
+const supports = [
+  {
+    label: "Help Center",
+    url: "#",
+  },
+  {
+    label: "FAQs",
+    url: "#",
+  },
+  {
+    label: "Order",
+    url: "#",
+  },
+  {
+    label: "Order Status",
+    url: "#",
+  },
+  {
+    label: "Returns & Exchanges",
+    url: "#",
+  },
+  {
+    label: "Contact Us",
+    url: "#",
+  },
+];
+
+const rest = [
+  {
+    label: "Community",
+    url: "#",
+  },
+  {
+    label: "Why Sopa",
+    url: "#",
+  },
+  {
+    label: "About",
+    url: "#",
+  },
+  {
+    label: "Discount Program",
+    url: "#",
+  },
+  {
+    label: "Sopa Blog",
+    url: "#",
+  },
+  {
+    label: "Sopa Ambassadors",
+    url: "#",
+  },
+];
+
+const socials = [
+  {
+    label: "Twitter",
+    icon: "twitter",
+    url: "#",
+  },
+  {
+    label: "Instagram",
+    icon: "instagram",
+    url: "#",
+  },
+  {
+    label: "Facebook",
+    icon: "facebook",
+    url: "#",
+  },
+];
+---
+
+<div class="p-16 bg-black text-white absolute bottom-0 w-full flex justify-between">
+  <div class="flex flex-col gap-8">
+    <img src="/logo/logo-dark.svg" alt="Logo" width="180" />
+    <p>Stay informed about Sopa with our latest releases and founder news.</p>
+    <input
+      placeholder="Enter email here for updates"
+      class="px-6 py-3 w -full rounded-full items-start border border-grey-300 bg-transparent text-white"
+    />
+  </div>
+  <div class="grid grid-cols-3 w-full gap-12 px-8">
+    <ul class="leading-10">
+      <li class="font-bold text-xl mb-4">Products</li>
+      {products.map((product) => <li>{product.label}</li>)}
+    </ul>
+    <ul class="leading-10">
+      <li class="font-bold text-xl mb-4">Support</li>
+      {supports.map((support) => <li>{support.label}</li>)}
+    </ul>
+    <ul class="leading-10">
+      <li class="font-bold text-xl mb-4">Everything Else</li>
+      {rest.map((r) => <li>{r.label}</li>)}
+    </ul>
+  </div>
+  <div class="flex items-center">
+    <ul class="leading-10">
+      {
+        socials.map((social) => (
+          <li class="flex gap-3">
+            <img
+              src={`/svgs/${social.icon}.svg`}
+              alt={`link-to-${social.label}`}
+            />
+            {social.label}
+          </li>
+        ))
+      }
+    </ul>
+  </div>
 </div>
