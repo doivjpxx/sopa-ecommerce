@@ -1,0 +1,26 @@
+---
+import BaseLayout from "../layout/BaseLayout.astro";
+---
+
+<BaseLayout>
+  <div class="flex justify-center">
+    <div class="flex flex-col items-start w-[485px] gap-6 px-4">
+      <p class="text-6xl font-bold mb-12">Sign in.</p>
+      <input
+        type="email"
+        name="email"
+        placeholder="Email address"
+        class="px-6 py-3 w-full rounded-full items-start border border-grey-300 bg-white"
+      />
+
+      <button
+        class="flex w-full py-3 px-6 justify-center items-start gap-10 rounded-full bg-black text-white"
+        >Email me a login link</button
+      >
+      <div>
+        <a href="">New to Sopa?</a>
+        <a href="" class="underline">Create an account</a>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

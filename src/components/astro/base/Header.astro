@@ -1,0 +1,76 @@
+---
+const navigationItems = [
+  {
+    label: "Men",
+    url: "#",
+  },
+  {
+    label: "Women",
+    url: "#",
+  },
+  {
+    label: "Accessories",
+    url: "#",
+  },
+  {
+    label: "About",
+    url: "#",
+  },
+];
+
+const actionItems = [
+  {
+    label: "Support",
+    icon: null,
+    url: "#",
+  },
+  {
+    label: "",
+    icon: "user",
+    url: "#",
+  },
+  {
+    lable: "",
+    icon: "cart",
+  },
+];
+---
+
+<div class="fluid">
+  <section class="flex justify-center items-center bg-black text-white py-2">
+    Free US shipping on order $80+
+  </section>
+  <nav class="py-4 px-24">
+    <div class="flex justify-between items-center">
+      <div><img src="/logo/logo.svg" alt="Logo" width="144" /></div>
+      <ul class="flex gap-12 items-center">
+        {
+          navigationItems.map((item) => (
+            <li>
+              <a href={item.url}>{item.label}</a>
+            </li>
+          ))
+        }
+        <li>
+          <button
+            class="bg-transparent hover:bg-yellowish-green text-white font-bold py-1.5 px-4 rounded-full text-yellowish-green hover:text-white border border-yellowish-green"
+            >Shoe Finder Quiz</button
+          >
+        </li>
+      </ul>
+      <ul class="flex gap-4">
+        {
+          actionItems.map((item) => (
+            <li>
+              {item.icon ? (
+                <img src={`/svgs/${item.icon}.svg`} alt={item.label} />
+              ) : (
+                item.label
+              )}
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </nav>
+</div>
