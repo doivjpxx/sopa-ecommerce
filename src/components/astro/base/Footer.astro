@@ -103,42 +103,100 @@ const socials = [
 ];
 ---
 
-<div class="p-16 bg-black text-white absolute bottom-0 w-full flex justify-between">
-  <div class="flex flex-col gap-8">
-    <img src="/logo/logo-dark.svg" alt="Logo" width="180" />
-    <p>Stay informed about Sopa with our latest releases and founder news.</p>
-    <input
-      placeholder="Enter email here for updates"
-      class="px-6 py-3 w -full rounded-full items-start border border-grey-300 bg-transparent text-white"
-    />
+<footer class="bg-black text-white">
+  <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
+    <div class="lg:flex lg:items-start lg:gap-8">
+      <div class="col-span-2 sm:col-span-1">
+        <div class="flex flex-col gap-8">
+          <img src="/logo/logo-dark.svg" alt="Logo" width="180" />
+          <p>
+            Stay informed about Sopa with our latest releases and founder news.
+          </p>
+          <input
+            placeholder="Enter email here for updates"
+            class="px-6 py-3 w -full rounded-full items-start border border-grey-300 bg-transparent text-white"
+          />
+        </div>
+      </div>
+      <div
+        class="mt-8 grid grid-cols-2 gap-8 lg:mt-0 lg:grid-cols-4 lg:gap-y-16"
+      >
+        <div class="col-span-2 sm:col-span-1">
+          <ul class="leading-10">
+            <li class="font-bold text-xl mb-4">Products</li>
+            {products.map((product) => <li>{product.label}</li>)}
+          </ul>
+        </div>
+        <div class="col-span-2 sm:col-span-1">
+          <ul class="leading-10">
+            <li class="font-bold text-xl mb-4">Support</li>
+            {supports.map((support) => <li>{support.label}</li>)}
+          </ul>
+        </div>
+        <div class="col-span-2 sm:col-span-1">
+          <ul class="leading-10">
+            <li class="font-bold text-xl mb-4">Everything Else</li>
+            {rest.map((r) => <li>{r.label}</li>)}
+          </ul>
+        </div>
+        <div class="col-span-2 sm:col-span-1 flex items-center">
+          <ul class="leading-10">
+            {
+              socials.map((social) => (
+                <li class="flex gap-3">
+                  <img
+                    src={`/svgs/${social.icon}.svg`}
+                    alt={`link-to-${social.label}`}
+                  />
+                  {social.label}
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="grid grid-cols-3 w-full gap-12 px-8">
-    <ul class="leading-10">
-      <li class="font-bold text-xl mb-4">Products</li>
-      {products.map((product) => <li>{product.label}</li>)}
-    </ul>
-    <ul class="leading-10">
-      <li class="font-bold text-xl mb-4">Support</li>
-      {supports.map((support) => <li>{support.label}</li>)}
-    </ul>
-    <ul class="leading-10">
-      <li class="font-bold text-xl mb-4">Everything Else</li>
-      {rest.map((r) => <li>{r.label}</li>)}
-    </ul>
+</footer>
+<!-- 
+<footer class="bg-black text-white absolute bottom-0">
+  <div class="p-16 w-full flex justify-between">
+    <div class="flex flex-col gap-8">
+      <img src="/logo/logo-dark.svg" alt="Logo" width="180" />
+      <p>Stay informed about Sopa with our latest releases and founder news.</p>
+      <input
+        placeholder="Enter email here for updates"
+        class="px-6 py-3 w -full rounded-full items-start border border-grey-300 bg-transparent text-white"
+      />
+    </div>
+    <div class="grid grid-cols-3 w-full gap-12 px-8">
+      <ul class="leading-10">
+        <li class="font-bold text-xl mb-4">Products</li>
+        {products.map((product) => <li>{product.label}</li>)}
+      </ul>
+      <ul class="leading-10">
+        <li class="font-bold text-xl mb-4">Support</li>
+        {supports.map((support) => <li>{support.label}</li>)}
+      </ul>
+      <ul class="leading-10">
+        <li class="font-bold text-xl mb-4">Everything Else</li>
+        {rest.map((r) => <li>{r.label}</li>)}
+      </ul>
+    </div>
+    <div class="flex items-center">
+      <ul class="leading-10">
+        {
+          socials.map((social) => (
+            <li class="flex gap-3">
+              <img
+                src={`/svgs/${social.icon}.svg`}
+                alt={`link-to-${social.label}`}
+              />
+              {social.label}
+            </li>
+          ))
+        }
+      </ul>
+    </div>
   </div>
-  <div class="flex items-center">
-    <ul class="leading-10">
-      {
-        socials.map((social) => (
-          <li class="flex gap-3">
-            <img
-              src={`/svgs/${social.icon}.svg`}
-              alt={`link-to-${social.label}`}
-            />
-            {social.label}
-          </li>
-        ))
-      }
-    </ul>
-  </div>
-</div>
+</footer> -->
