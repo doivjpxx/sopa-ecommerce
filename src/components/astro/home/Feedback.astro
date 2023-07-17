@@ -3,17 +3,19 @@ import Rating from "../Rating.astro";
 import Button from "../base/Button.astro";
 ---
 
-<div class="flex gap-4">
-  <div class="rounded-lg bg-white-smoke pt-12 pr-4">
-    <h2 class="text-5xl font-bold mb-12">The Hype is real...</h2>
-    <div class="flex gap-4">
-      <img src="/imgs/the-hype-is-real.png" />
+<div class="flex flex-col lg:flex-row gap-4">
+  <div class="rounded-lg bg-white-smoke pt-12 lg:pr-4">
+    <h2 class="text-2xl md:text-5xl font-bold mb-8 lg:mb-12">
+      The Hype is real...
+    </h2>
+    <div class="flex flex-col lg:flex-row gap-4 items-center lg:items-start">
+      <img src="/imgs/the-hype-is-real.png" class="w-[150px] sm:w-full" />
       <div class="flex flex-col items-center justify-center gap-8">
         <div class="flex">
           <h4>phong h.</h4>
           <Rating rating={5} />
         </div>
-        <p class="text-2xl font-bold">
+        <p class="md:text-2xl font-bold p-2 md:p-0">
           These stylishly simple and incredibly comfortable shoes have become
           such a staple in my daily wardrobe that I'm already buying a second
           pair.
@@ -21,9 +23,10 @@ import Button from "../base/Button.astro";
       </div>
     </div>
   </div>
-  <div class="flex-none rounded-lg bg-white-smoke pb-4 w-75 ">
-    <img src="/imgs/the-hype-is-real-right.png" alt="" />
-    <div class="flex mt-24 justify-between gap-2 px-4">
+  <div class="flex-none rounded-lg bg-white-smoke pb-4 w-75">
+    <img src="/imgs/the-hype-is-real-right.png" />
+
+    <div class="flex mt-8 lg:mt-24 justify-between gap-2 px-4">
       <div class="flex flex-col items-start gap-2">
         <h4 class="font-bold text-lg">Model 000</h4>
         <p>Navy</p>
