@@ -1,0 +1,70 @@
+---
+import Button from "../base/Button.astro";
+---
+
+<div class="flex flex-col gap-16">
+  <div class="grid grid-cols-1 md:grid-cols-3 border rounded-lg">
+    <div class="hidden md:block md:col-span-1">
+      <img src="/imgs/story-1.png" alt="" />
+    </div>
+    <div class="col-span-1">
+      <div
+        class="flex flex-col h-full py-4 justify-center items-center gap-10 bg-black text-white"
+      >
+        <div class="hidden md:block">
+          <Button title="Our Story" variant="white" />
+        </div>
+        <p class="font-bold text-2xl lg:text-4xl">SOPA</p>
+        <div class="block md:hidden">
+          <Button title="Our Story" variant="white" />
+        </div>
+      </div>
+    </div>
+    <div class="col-span-1">
+      <div
+        class="flex flex-col h-full py-4 justify-center items-center gap-10 px-4"
+      >
+        <p class="font-bold text-xl">
+          SOPA was born out of a simple yet powerful concept - creating a shoe
+          that you would choose to wear every single day, and they've brought
+          this idea to life in the bustling city of New York.
+        </p>
+        <div>
+          <Button title="Learn More" variant="black" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 border rounded-lg">
+    <div class="hidden md:block md:col-span-1">
+      <img src="/imgs/story-2.png" alt="" />
+    </div>
+    <div class="col-span-1">
+      <div
+        class="flex flex-col h-full py-4 justify-center items-center gap-10 bg-black text-white"
+      >
+        <div class="hidden md:block">
+          <Button title="Featured" variant="white" />
+        </div>
+        <p class="font-bold text-xl lg:text-4xl">HUMANS OF NEW YOUK</p>
+        <div class="block md:hidden">
+          <Button title="Featured" variant="white" />
+        </div>
+      </div>
+    </div>
+    <div class="col-span-1">
+      <div
+        class="flex flex-col h-full py-4 justify-center items-center gap-10 px-4"
+      >
+        <p class="font-bold text-xl">
+          Read our co-founder Sidra’s story about struggle, chasing dreams, and
+          making shoes.
+        </p>
+        <div>
+          <Button title="Learn More" variant="black" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

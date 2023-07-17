@@ -6,6 +6,7 @@ import Quote from "../components/astro/home/Quote.astro";
 import ExploreProducts from "../components/astro/home/ExploreProducts.astro";
 import Feedback from "../components/astro/home/Feedback.astro";
 import Introduction from "../components/astro/home/Introduction.astro";
+import Story from "../components/astro/home/Story.astro";
 ---
 
 <BaseLayout
@@ -16,14 +17,15 @@ import Introduction from "../components/astro/home/Introduction.astro";
   }}
 >
   <div class="flex flex-col gap-10 relative">
-    <div class="px-8 md:px-16 lg:px-24">
+    <div class="flex flex-col gap-10 px-8 md:px-16 lg:px-24">
       <Banner />
       <Quote />
       <ExploreProducts />
       <Feedback />
     </div>
-    <div>
-      <Introduction />
+    <Introduction />
+    <div class="px-8 md:px-16 lg:px-24">
+      <Story />
     </div>
   </div>
 </BaseLayout>
