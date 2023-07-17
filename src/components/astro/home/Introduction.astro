@@ -1,10 +1,64 @@
 ---
 import Button from "../base/Button.astro";
+import Card from "../base/Card.astro";
 ---
 
-<div class="flex flex-col gap-10 relative">
-  <div class="bg-black w-100">123</div>
+<div class="flex flex-col px-8 py-12 md:px-24 gap-10 relative bg-black">
   <div>
     <Button title="New" variant="white" />
+  </div>
+  <p class="text-4xl font-bold text-white">Introducing Model 001</p>
+  <img src="/imgs/introduction.png" alt="" class="rounded-lg" />
+  <div class="grid text-left gap-8">
+    <p class="text-xl font-bold text-white">Explore Model 001</p>
+    <div class="grid grid-cols-1 md:grid-cols-9 gap-10">
+      <div class="grid gap-10 col-span-1 md:col-span-3">
+        <Card
+          title="Model 000"
+          subTitle="White"
+          price="100"
+          img="/imgs/shoes-model-000-1.png"
+        />
+        <Card
+          title="Model 000"
+          subTitle="White"
+          price="100"
+          img="/imgs/shoes-model-000-0.png"
+        />
+      </div>
+      <Card
+        className="col-span-1 md:col-span-6"
+        title="Model 000"
+        subTitle="White"
+        cta
+        img="/imgs/shoes-model-000-2.png"
+      />
+    </div>
+  </div>
+  <div class="grid text-left gap-8">
+    <p class="text-xl font-bold text-white">Accessoies</p>
+    <div class="grid grid-cols-1 md:grid-cols-9 gap-10">
+      <Card
+        className="col-span-1 md:col-span-6"
+        title="Model 000"
+        subTitle="White"
+        cta
+        img="/imgs/shoes-model-000-1.png"
+      />
+      <div class="grid gap-10 col-span-1 md:col-span-3">
+        <Card
+          title="Model 000"
+          subTitle="White"
+          price="100"
+          img="/imgs/shoes-model-000-5.png"
+        />
+        <Card
+          title="Model 000"
+          subTitle="White"
+          price="100"
+          img="/imgs/shoes-model-000-4.png"
+        />
+      </div>
+    </div>
   </div>
 </div>

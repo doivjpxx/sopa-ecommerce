@@ -16,8 +16,7 @@ const {
   includeGsap,
   noPadding = false,
 } = Astro.props;
-const defaultClass =
-  "mx-auto max-w-7xl lg:px-24 pb-16 pt-20 text-center lg:pt-32";
+const defaultClass = "mx-auto max-w-8xl pb-16 pt-20 text-center lg:pt-32";
 ---
 
 <html lang="en">
@@ -30,7 +29,11 @@ const defaultClass =
 
   <body>
     <Header />
-    <div class={noPadding ? defaultClass : `${defaultClass} px-8 md:px-16`}>
+    <div
+      class={noPadding
+        ? defaultClass
+        : `${defaultClass} px-8 md:px-16 lg:px-24`}
+    >
       <slot />
     </div>
     <Footer />
