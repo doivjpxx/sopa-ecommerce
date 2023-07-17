@@ -4,17 +4,19 @@ import { GsapPlugin } from "../core/type";
 import Banner from "../components/astro/home/Banner.astro";
 import Quote from "../components/astro/home/Quote.astro";
 import ExploreProducts from "../components/astro/home/ExploreProducts.astro";
+import Feedback from "../components/astro/home/Feedback.astro";
 ---
 
 <BaseLayout
   includeGsap={{
     enabled: true,
-    plugins: [GsapPlugin.SplitText, GsapPlugin.DrawSVG],
+    plugins: [GsapPlugin.SplitText],
   }}
 >
   <div class="flex flex-col gap-10">
     <Banner />
     <Quote />
     <ExploreProducts />
+    <Feedback />
   </div>
 </BaseLayout>

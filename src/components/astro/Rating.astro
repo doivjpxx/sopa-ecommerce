@@ -1,0 +1,13 @@
+---
+const { rating } = Astro.props;
+---
+
+<div class="flex flex-wrap">
+  {
+    Array.from({ length: rating }, () => (
+      <span>
+        <img src="/svgs/star.svg" />
+      </span>
+    ))
+  }
+</div>
