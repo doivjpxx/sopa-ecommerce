@@ -1,0 +1,16 @@
+---
+const { variant = "primary", isFull = false, title } = Astro.props;
+const defaults = "py-3 px-6 justify-center items-start gap-10 rounded-full";
+---
+
+<button
+  class={`
+        ${defaults}
+        ${
+          variant === "primary"
+            ? "bg-primary text-black"
+            : `bg-${variant} text-black`
+        }
+        ${isFull ? "w-full" : ""}
+    `}>{title}</button
+>

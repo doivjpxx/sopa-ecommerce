@@ -1,0 +1,31 @@
+---
+const brands = [
+  {
+    label: "Vogue",
+    icon: "vogue",
+  },
+  {
+    label: "Esquire",
+    icon: "esquire",
+  },
+  {
+    label: "Humans of newyork",
+    icon: "humans-of-ny",
+  },
+];
+---
+
+<div
+  class="flex flex-col px-8 md:px-24 py-12 lg:px-32 items-start gap-10 bg-white-smoke rounded-lg"
+>
+  <p class="font-bold text-xl md:text-3xl">
+    “These are the most thoughtfully designed sneakers on the market.”
+  </p>
+  <div class="flex flex-col gap-8 items-center md:flex-row justify-between mx-auto w-full">
+    {
+      brands.map((brand) => (
+        <img src={`/brands/${brand.icon}.svg`} alt={brand.label} width="100" />
+      ))
+    }
+  </div>
+</div>
