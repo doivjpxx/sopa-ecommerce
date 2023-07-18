@@ -17,7 +17,7 @@ import Everyday from "../components/astro/home/Everyday.astro";
     plugins: [GsapPlugin.SplitText],
   }}
 >
-  <div class="flex flex-col gap-10 relative">
+  <div id="main" class="flex flex-col gap-10 relative">
     <div class="flex flex-col gap-10 px-8 md:px-16 lg:px-24">
       <Banner />
       <Quote />
@@ -30,4 +30,20 @@ import Everyday from "../components/astro/home/Everyday.astro";
       <Everyday />
     </div>
   </div>
+  <script is:inline>
+    const bannerTl = gsap.timeline({
+      defaults: {
+        ease: "power1.out",
+        duration: 0.8,
+        autoAlpha: 0,
+        yPercent: 100,
+      },
+    });
+    const bannerText = document.querySelector("#banner-text p");
+    const button = document.querySelector("#banner-text button");
+
+    bannerTl.from(bannerText, {}).from(button, {});
+
+  
+  </script>
 </BaseLayout>

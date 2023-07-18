@@ -48,7 +48,7 @@ const products = [
 ];
 ---
 
-<section class="flex flex-col gap-8 mb-8">
+<section class="explore-section flex flex-col gap-8 mb-8">
   <div class="flex justify-between">
     <h2 class="font-bold text-xl">Explore Model 000</h2>
     <a href="#" class="underline">Shop now</a>
@@ -56,14 +56,76 @@ const products = [
   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
     {
       products.map((product, index) => (
-        <Card
-          title={product.name}
-          subTitle={product.type}
-          price={product.price}
-          img={`/imgs/${product.value}-${index}.png`}
-        />
+        <div class="explore-products">
+          <Card
+            title={product.name}
+            subTitle={product.type}
+            price={product.price}
+            img={`/imgs/${product.value}-${index}.png`}
+          />
+        </div>
       ))
     }
   </div>
   <div><Button title="Shop now" /></div>
+
+  <script is:inline>
+    const exploreTl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".explore-section",
+        start: "top 90%",
+        end: "bottom 20%",
+        // markers: true,
+        toggleActions: "restart none none reverse",
+      },
+    });
+
+    const products = gsap.utils.toArray(".explore-products");
+    const productImages = gsap.utils.toArray(".explore-products img");
+    const productTitles = gsap.utils.toArray(".explore-products h3");
+    const productSubTitles = gsap.utils.toArray(".explore-products p");
+    const exploreShopButton = document.querySelector(".explore-section button");
+
+    exploreTl
+      .from(products, {
+        opacity: 0,
+        y: 100,
+        stagger: 0.2,
+        scale: 0.8,
+      })
+      .to(products, {
+        opacity: 1,
+        y: 0,
+        stagger: 0.2,
+        scale: 1,
+      })
+      .from(
+        productImages,
+        {
+          opacity: 0,
+          stagger: 0.2,
+        },
+        0
+      )
+      .from(
+        productTitles,
+        {
+          opacity: 0,
+          stagger: 0.2,
+        },
+        0
+      )
+      .from(
+        productSubTitles,
+        {
+          opacity: 0,
+          stagger: 0.2,
+        },
+        0
+      )
+      .from(exploreShopButton, {
+        opacity: 0,
+        stagger: 0.2,
+      }, '-=0.9');
+  </script>
 </section>
